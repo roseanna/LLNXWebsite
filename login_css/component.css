@@ -1,32 +1,62 @@
-@font-face {
-	font-family: 'icomoon';
-	src:url('../fonts/icomoon/icomoon.eot');
-	src:url('../fonts/icomoon/icomoon.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/icomoon/icomoon.woff') format('woff'),
-		url('../fonts/icomoon/icomoon.ttf') format('truetype'),
-		url('../fonts/icomoon/icomoon.svg#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
+/* Main Content */
+.login.main {
+	max-width: 50em;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.login.clearfix:before, .login.clearfix:after { content: " "; display: table; }
+.login.clearfix:after { clear: both; }
+
+
+.login*, .login*:after, .login*:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+.login.container{
+    font-size: 100%;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: #ffe8e7;
+    background: #E96D65;
+    font-weight: 300;
+    overflow-x: hidden;
+}
+.login.main,
+.login.container > header {
+	margin: 0 auto;
+	padding: 2em;
+	text-align: center;
+}
+
+.login.container > header h1 {
+	font-size: 2.625em;
+	line-height: 1.3;
+	margin: 0;
+	font-weight: 300;
+}
+
+.login.container > header span {
+	display: block;
+	font-size: 60%;
+	color: #b14943;
+	padding: 0 0 0.6em 0.1em;
 }
 
 /* general style for the form */
-.nl-form {
+.login.nl-form {
 	width: 100%;
 	margin: 0.3em auto 0 auto;
 	font-size: 4em;
 	line-height: 1.5;
 }
 
-.nl-form ul {
+.login.nl-form ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
 /* normalize the input elements, make them look like everything else */
-.nl-form input,
-.nl-form select,
-.nl-form button {
+.login.nl-form input,
+.login.nl-form select,
+.login.nl-form button {
 	border: none;
 	background: transparent;
 	font-family: inherit;
@@ -41,24 +71,26 @@
 	-moz-appearance: none;
 }
 
-.nl-form input:focus {
+.login.nl-form input:focus {
 	outline: none;
 }
 
+
+
 /* custom field (drop-down, text element) styling  */
-.nl-field {
+.login.nl-field {
 	display: inline-block;
 	position: relative;
 }
 
-.nl-field.nl-field-open {
+.login.nl-field.nl-field-open {
 	z-index: 10000;
 }
 
 /* the toggle is the visible part in the form */
-.nl-field-toggle,
-.nl-form input,
-.nl-form select  {
+.login.nl-field-toggle,
+.login.nl-form input,
+.login.nl-form select  {
 	line-height: inherit;
 	display: inline-block;
 	color: #b14943;
@@ -67,7 +99,7 @@
 }
 
 /* drop-down list / text element */
-.nl-field ul {
+.login.nl-field ul {
 	position: absolute;
 	visibility: hidden;
 	background: #76C3BD;
@@ -83,7 +115,7 @@
 	transition: visibility 0s 0.3s, opacity 0.3s, transform 0.3s;
 }
 
-.nl-field.nl-field-open ul {
+.login.nl-field.nl-field-open ul {
 	visibility: visible;
 	opacity: 1;
 	-webkit-transform: translateY(-50%) scale(1);
@@ -94,7 +126,7 @@
 	transition: visibility 0s 0s, opacity 0.3s, transform 0.3s;
 }
 
-.nl-field ul li {
+.login.nl-field ul li {
 	color: #fff;
 	position: relative;
 }
@@ -118,9 +150,9 @@
 }
 
 /* icons for some elements */
-.nl-dd ul li.nl-dd-checked:before,
-.nl-submit:before,
-.nl-field-go:before {
+.login.nl-dd ul li.nl-dd-checked:before,
+.login.nl-submit:before,
+.login.nl-field-go:before {
 	font-family: 'nlicons';
 	speak: none;
 	font-style: normal;
@@ -130,7 +162,7 @@
 	-webkit-font-smoothing: antialiased;
 }
 
-.nl-dd ul li.nl-dd-checked:before {
+.login.nl-dd ul li.nl-dd-checked:before {
 	content: "\e000";
 	position: absolute;
 	right: 1em;
@@ -138,18 +170,18 @@
 	line-height: 3;
 }
 
-.nl-ti-text ul {
+.login.nl-ti-text ul {
 	min-width: 8em;
 }
 
-.nl-ti-text ul li.nl-ti-input input {
+.login.nl-ti-text ul li.nl-ti-input input {
 	width: 100%;
 	padding: 0.2em 2em 0.2em 0.5em;
 	border-bottom: none;
 	color: #fff;
 }
 
-.nl-form .nl-field-go {
+.login.nl-form .login.nl-field-go {
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -161,7 +193,7 @@
 	color: transparent;
 }
 
-.nl-field-go:before {
+.login.nl-field-go:before {
 	content: "\e001";
 	font-size: 75%;
 	color: #fff;
@@ -199,7 +231,7 @@ input:focus::-ms-input-placeholder {
 }
 
 /* example field below text input */
-.nl-ti-text ul li.nl-ti-example {
+.login.nl-ti-text ul li.nl-ti-example {
 	font-size: 40%;
 	font-style: italic;
 	font-weight: 400;
@@ -208,82 +240,16 @@ input:focus::-ms-input-placeholder {
 	border-top: 1px dashed rgba(255,255,255,0.7);
 }
 
-.nl-ti-text ul li.nl-ti-example em {
+.login.nl-ti-text ul li.nl-ti-example em {
 	color: #fff
 }
 
 /* submit button */
-.nl-submit-wrap {
-	/*1*/
-	border: 3px solid #fff;
-	color: #fff;
-	/*1d*/
-	overflow: hidden;
-
-	font-family: 	inherit;
-	font-size: 		inherit;
-	background: 	none;
-	cursor: 		pointer;
-	padding: 		25px 80px;
-	display: 		inline-block;
-	margin: 		15px 30px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-weight: 	700;
-	outline: 		none;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
+.login.nl-submit-wrap {
+	margin-top: 0.4em;
 }
 
-.container {
-/*	height: 100%;
-	position: relative;*/
-	position: fixed;
-    bottom: 20px;
-    width: 100%;
-}
-
-.nl-submit-wrap:after {
-	width: 		0;
-	height: 	103%;
-	top: 		50%;
-	left: 		50%;
-	background: #fff;
-	opacity: 	0;
-	-webkit-transform: 	translateX(-50%) translateY(-50%);
-	-moz-transform: 	translateX(-50%) translateY(-50%);
-	-ms-transform: 		translateX(-50%) translateY(-50%);
-	transform: 			translateX(-50%) translateY(-50%);
-}
-
-.nl-submit:after {
-	content: '';
-	position: absolute;
-	z-index: -1;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-}
-
-.nl-submit-wrap:hover,
-.nl-submit-wrap:active {
-	color: #0e83cd;
-}
-
-.nl-submit-wrap:hover:after {
-	width: 15%;
-	opacity: 1;
-	height: 70%;
-}
-
-.nl-submit-wrap:active:after {
-	width: 15%;
-	opacity: 1;
-}
-
-
-.nl-form .nl-submit {
+.login.nl-form .login.nl-submit {
 	line-height: 3;
 	text-transform: uppercase;
 	cursor: pointer;
@@ -296,7 +262,7 @@ input:focus::-ms-input-placeholder {
 	letter-spacing: 3px;
 }
 
-.nl-submit:before {
+.login.nl-submit:before {
 	content: "\e001";
 	color: #fff;
 	float: left;
@@ -305,17 +271,17 @@ input:focus::-ms-input-placeholder {
 	background: #69B1A9;
 }
 
-.no-touch .nl-form .nl-submit:hover,
-.no-touch .nl-form .nl-submit:active {
+.no-touch .login.nl-form .nl-submit:hover,
+.no-touch .login.nl-form .nl-submit:active {
 	background: #69B1A9;
 }
 
-.no-touch .nl-form .nl-submit:hover:before {
+.no-touch .login.nl-form .nl-submit:hover:before {
 	background: #58a199;
 }
 
 /* overlay becomes visible when a field is opened */
-.nl-overlay {
+.login.nl-overlay {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -330,7 +296,7 @@ input:focus::-ms-input-placeholder {
 	transition: visibility 0s 0.3s, opacity 0.3s;
 }
 
-.nl-field.nl-field-open ~ .nl-overlay {
+.login.nl-field.nl-field-open ~ .nl-overlay {
 	opacity: 1;
 	visibility: visible;
 	-webkit-transition-delay: 0s;
@@ -339,13 +305,13 @@ input:focus::-ms-input-placeholder {
 }
 
 @media screen and (max-width: 45em) {
-	.nl-form {
+	.login.nl-form {
 		font-size: 3em;
 	}
 }
 
 @media screen and (max-width: 25em) {
-	.nl-form {
+	.login.nl-form {
 		font-size: 2em;
 	}
 }

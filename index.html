@@ -1,36 +1,59 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!-->
 <html class="no-js" lang="en"><!--<![endif]-->
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
         <title>LLNX</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <meta name="description" content="Fullscreen Background Image Slideshow with CSS3 - A Css-only fullscreen background image slideshow" />
-        <meta name="keywords" content="css3, css-only, fullscreen, background, slideshow, images, content" />
-        <meta name="author" content="Codrops" />
         <link rel="shortcut icon" href="../favicon.ico"> 
-        <link rel="stylesheet" type="text/css" href="css/demo.css" />
-        <link rel="stylesheet" type="text/css" href="css/style1.css" />
-        <link rel="stylesheet" type="text/css" href="css/default.css" />
+        <link rel="stylesheet" type="text/css" href="css/slideshow.css" />
+        <link rel="stylesheet" type="text/css" href="css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
         <link rel="stylesheet" type="text/css" href="css/component.css" />
-		<script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
+        <link rel="stylesheet" type="text/css" href="login_css/component.css" />
+        <script src="login_js/modernizr.custom.js"></script>
+
     </head>
-    <body id="page">
-        <ul class="cb-slideshow">
-            <li><span>Image 01</span><div><h3>Connection by Design</h3></div></li>
-            <li><span>Image 02</span><div><h3>Connection by Design</h3></div></li>
-            <li><span>Image 03</span><div><h3>Connection by Design</h3></div></li>
-            <li><span>Image 04</span><div><h3>Connection by Design</h3></div></li>
-            <li><span>Image 05</span><div><h3>Connection by Design</h3></div></li>
-            <li><span>Image 06</span><div><h3>Connection by Design</h3></div></li>
-        </ul>
+    <body>
         <div class="container">
-            <button onclick="window.location.href='./login.html'" class="btn btn-1 btn-1d">Enter</button>
+            <ul class="cb-slideshow">
+                <li><span>Image 01</span></li>
+                <li><span>Image 02</span></li>
+                <li><span>Image 03</span></li>
+                <li><span>Image 04</span></li>
+                <li><span>Image 05</span></li>
+                <li><span>Image 06</span></li>
+            </ul>
+            <div id="enter-btn" class="button-wrapper">
+                <button class="btn btn-1 btn-1d" >Enter</button>
+            </div>
         </div>
+        <div class="login container">
+                <header>
+                    <h1>Welcome to Llnx<span>Introduce yourself</span></h1> 
+                </header>
+                <div class="login main login clearfix">
+                    <form id="login nl-form" class="login nl-form">
+                        My name is 
+                        <input type="text" value="" placeholder="first" data-subline="For example: <em>Taylor</em>"/>
+                        <input type="text" value="" placeholder="last" data-subline="For example: <em>Swift</em>"/>.
+                        I like to receive my emails at 
+                        <input type="text" value="" placeholder="email" data-subline="For example: <em>hello@me.com</em>"/>
+                        and my favorite password is 
+                        <input type="text" value="" placeholder="password" data-subline="For example: <em>password1</em>"/>.
+                        Just for fun, I'll type it again: 
+                        <input type="text" value="" placeholder="confirm password" data-subline="For example: <em>password1</em>"/>!
+
+                        <div class="login nl-submit-wrap">
+                            <button class="login nl-submit-wrap" type="submit">Register</button>
+                        </div>
+                    </form>
+            </div>
+        </div> 
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="login_js/nlform.js"></script>
+        <script>
+            var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+        </script>
+
     </body>
 </html>
