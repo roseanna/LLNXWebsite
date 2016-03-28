@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 	<head>
-		<title>LLNX</title>
+		<title>Natural Language Form</title>
 		<link rel="stylesheet" type="text/css" href="login_css/default.css" />
 		<link rel="stylesheet" type="text/css" href="login_css/component.css" />
-		<script src="js/modernizr.custom.js"></script>
+		<script src="login_js/modernizr.custom.js"></script>
 	</head>
-	<body class="login nl-blurred">
-		<div class="login container demo-1">
+	<body class="nl-blurred">
+		<div class="container demo-1">
 			<header>
-				<h1>Welcome to Llnx<span>Introduce yourself</span></h1>	
-			</header>
+	            <h1>Welcome to Llnx<span>Introduce yourself</span></h1> 
+	        </header>
 			<div class="main clearfix">
-				<form id="nl-form" class="login nl-form">
-					My name is 
-					<input type="text" value="" placeholder="first" data-subline="For example: <em>Taylor</em>"/>
-					<input type="text" value="" placeholder="last" data-subline="For example: <em>Swift</em>"/>.
-					I like to receive my emails at 
-					<input type="text" value="" placeholder="email" data-subline="For example: <em>hello@me.com</em>"/>
-					and my favorite password is 
-					<input type="text" value="" placeholder="password" data-subline="For example: <em>password1</em>"/>.
-					Just for fun, I'll type it again: 
-					<input type="text" value="" placeholder="confirm password" data-subline="For example: <em>password1</em>"/>!
-`
-					<div class="nl-submit-wrap">
-						<button class="nl-submit-wrap" type="submit">Register</button>
+				<form id="nl-form" class="nl-form">
+	                My name is 
+	                <br>
+	                <input type="text" value="" placeholder="first" data-subline="For example: <em>Taylor</em>"/>
+	                <input type="text" value="" placeholder="last" data-subline="For example: <em>Swift</em>"/>.
+	                <br>
+	                I like to receive my emails at 
+	                <input type="text" value="" placeholder="email" data-subline="For example: <em>hello@me.com</em>"/>
+	                and my favorite password is 
+	                <input type="text" value="" placeholder="password" data-subline="For example: <em>password1</em>"/>.
+	                <br>
+	                Just for fun, I'll type it again: 
+	                <input type="text" value="" placeholder="confirm password" data-subline="For example: <em>password1</em>"/>!
+					<div id="register-btn" class="nl-submit-wrap">
+						<button class="nl-submit" type="submit">Register</button>
 					</div>
+					<div class="nl-overlay"></div>
 				</form>
 			</div>
-		</div>
+		</div><!-- /container -->
+    </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    	<script src="js/scripts.js"></script>
 		<script src="login_js/nlform.js"></script>
 		<script>
 			var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+
 		</script>
 	</body>
 </html>

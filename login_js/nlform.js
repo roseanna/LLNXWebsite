@@ -20,7 +20,7 @@
 
 	function NLForm( el ) {	
 		this.el = el;
-		this.overlay = this.el.querySelector( 'login nl-overlay' );
+		this.overlay = this.el.querySelector( '.nl-overlay' );
 		this.fields = [];
 		this.fldOpen = -1;
 		this._init();
@@ -68,14 +68,14 @@
 		_createDropDown : function() {
 			var self = this;
 			this.fld = document.createElement( 'div' );
-			this.fld.className = 'login nl-field login nl-dd';
+			this.fld.className = 'nl-field nl-dd';
 			this.toggle = document.createElement( 'a' );
 			this.toggle.innerHTML = this.elOriginal.options[ this.elOriginal.selectedIndex ].innerHTML;
-			this.toggle.className = 'login nl-field-toggle';
+			this.toggle.className = 'nl-field-toggle';
 			this.optionsList = document.createElement( 'ul' );
 			var ihtml = '';
 			Array.prototype.slice.call( this.elOriginal.querySelectorAll( 'option' ) ).forEach( function( el, i ) {
-				ihtml += self.elOriginal.selectedIndex === i ? '<li class="login nl-dd-checked">' + el.innerHTML + '</li>' : '<li>' + el.innerHTML + '</li>';
+				ihtml += self.elOriginal.selectedIndex === i ? '<li class="nl-dd-checked">' + el.innerHTML + '</li>' : '<li>' + el.innerHTML + '</li>';
 				// selected index value
 				if( self.elOriginal.selectedIndex === i ) {
 					self.selectedIdx = i;
@@ -90,23 +90,23 @@
 		_createInput : function() {
 			var self = this;
 			this.fld = document.createElement( 'div' );
-			this.fld.className = 'login nl-field login nl-ti-text';
+			this.fld.className = 'nl-field nl-ti-text';
 			this.toggle = document.createElement( 'a' );
 			this.toggle.innerHTML = this.elOriginal.getAttribute( 'placeholder' );
-			this.toggle.className = 'login nl-field-toggle';
+			this.toggle.className = 'nl-field-toggle';
 			this.optionsList = document.createElement( 'ul' );
 			this.getinput = document.createElement( 'input' );
 			this.getinput.setAttribute( 'type', 'text' );
 			this.getinput.setAttribute( 'placeholder', this.elOriginal.getAttribute( 'placeholder' ) );
 			this.getinputWrapper = document.createElement( 'li' );
-			this.getinputWrapper.className = 'login nl-ti-input';
+			this.getinputWrapper.className = 'nl-ti-input';
 			this.inputsubmit = document.createElement( 'button' );
-			this.inputsubmit.className = 'login nl-field-go';
+			this.inputsubmit.className = 'nl-field-go';
 			this.inputsubmit.innerHTML = 'Go';
 			this.getinputWrapper.appendChild( this.getinput );
 			this.getinputWrapper.appendChild( this.inputsubmit );
 			this.example = document.createElement( 'li' );
-			this.example.className = 'login nl-ti-example';
+			this.example.className = 'nl-ti-example';
 			this.example.innerHTML = this.elOriginal.getAttribute( 'data-subline' );
 			this.optionsList.appendChild( this.getinputWrapper );
 			this.optionsList.appendChild( this.example );
@@ -145,7 +145,7 @@
 			this.open = true;
 			this.form.fldOpen = this.pos;
 			var self = this;
-			this.fld.className += ' login nl-field-open';
+			this.fld.className += ' nl-field-open';
 		},
 		close : function( opt, idx ) {
 			if( !this.open ) {
@@ -153,14 +153,14 @@
 			}
 			this.open = false;
 			this.form.fldOpen = -1;
-			this.fld.className = this.fld.className.replace(/\b login nl-field-open\b/,'');
+			this.fld.className = this.fld.className.replace(/\b nl-field-open\b/,'');
 
 			if( this.type === 'dropdown' ) {
 				if( opt ) {
-					// remove class login nl-dd-checked from previous option
+					// remove class nl-dd-checked from previous option
 					var selectedopt = this.optionsList.children[ this.selectedIdx ];
 					selectedopt.className = '';
-					opt.className = 'login nl-dd-checked';
+					opt.className = 'nl-dd-checked';
 					this.toggle.innerHTML = opt.innerHTML;
 					// update selected index value
 					this.selectedIdx = idx;

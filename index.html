@@ -2,14 +2,12 @@
 <html class="no-js" lang="en"><!--<![endif]-->
     <head>
         <title>LLNX</title>
-        <link rel="shortcut icon" href="../favicon.ico"> 
         <link rel="stylesheet" type="text/css" href="css/slideshow.css" />
         <link rel="stylesheet" type="text/css" href="css/reset.css" />
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
         <link rel="stylesheet" type="text/css" href="css/component.css" />
         <link rel="stylesheet" type="text/css" href="login_css/component.css" />
-        <script src="login_js/modernizr.custom.js"></script>
-
+   
     </head>
     <body>
         <div class="container">
@@ -26,33 +24,21 @@
             </div>
         </div>
         <div class="login container">
-                <header>
-                    <h1>Welcome to Llnx<span>Introduce yourself</span></h1> 
-                </header>
-                <div class="login main login clearfix">
-                    <form id="login nl-form" class="login nl-form">
-                        My name is 
-                        <input type="text" value="" placeholder="first" data-subline="For example: <em>Taylor</em>"/>
-                        <input type="text" value="" placeholder="last" data-subline="For example: <em>Swift</em>"/>.
-                        I like to receive my emails at 
-                        <input type="text" value="" placeholder="email" data-subline="For example: <em>hello@me.com</em>"/>
-                        and my favorite password is 
-                        <input type="text" value="" placeholder="password" data-subline="For example: <em>password1</em>"/>.
-                        Just for fun, I'll type it again: 
-                        <input type="text" value="" placeholder="confirm password" data-subline="For example: <em>password1</em>"/>!
-
-                        <div class="login nl-submit-wrap">
-                            <button class="login nl-submit-wrap" type="submit">Register</button>
-                        </div>
-                    </form>
+            <div class="iframeWrapper">
+                <!-- Scrolling = "no" -->
+                <iframe src="./login.html" class="formFrame" frameborder="0"></iframe>
             </div>
-        </div> 
-
+        </div>
+            
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <script src="js/scripts.js"></script>
         <script src="login_js/nlform.js"></script>
         <script>
             var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+            function closeIFrame(){
+                $('.login.container').animate({top: "-100%"}, 1000);
+            }
+            document.domain = document.domain;
         </script>
 
     </body>

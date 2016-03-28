@@ -22,7 +22,7 @@ body, html {
 }
 
 #enter-btn {
-	z-index: 3;
+	z-index: 2;
 	text-align: center;
 	width: 100%;
 	bottom: 10%;
@@ -30,9 +30,33 @@ body, html {
 }
 
 #enter-btn button {
-	z-index: 3;
+	z-index: 2;
 }
 
 .container.login {
 	top: -100%;
+	z-index: 3;
+	overflow: hidden;
+}
+
+.iframeWrapper {
+	position: relative;
+	width: 100%;
+	height: 0;
+	font-size: 2em;
+	overflow: hidden;
+	padding-bottom: 80%;
+}
+
+.iframeWrapper iframe{
+	height: 100%;
+	width: 70%;
+	left: 15%;
+	position: absolute;
+}
+
+.formFrame{
+	height: 100%;
+	width: 70%;
+	z-index: 3;
 }

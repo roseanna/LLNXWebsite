@@ -3,3 +3,11 @@ $(function() {
 		$('.container.login').animate({top: 0});
 	});
 });
+
+$(function(){
+	$("#register-btn").on('click', function() {
+		parent.closeIFrame();
+	});	
+})
+
+
